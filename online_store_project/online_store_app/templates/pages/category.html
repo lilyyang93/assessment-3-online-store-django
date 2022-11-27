@@ -1,0 +1,18 @@
+{% extends 'pages/layout.html' %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Lily's Cafe</title>
+    </head>
+    {% block body %}
+    <body>
+        <h1>{{category_products.0.category}}</h1>
+            {% for product in category_products %}
+                 <a href="{% url 'individual_product' product.id %}">{{product.name}}</a>
+                 <br>
+            {% endfor %} 
+        <a href="{% url 'homepage' %}">Return Home</a></li>
+    </body>
+    {% endblock %}
+</html>

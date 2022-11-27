@@ -1,0 +1,20 @@
+{% extends 'pages/layout.html' %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Lily's Cafe</title>
+        <script>
+            axios.get('')
+        </script>
+    </head>
+    {% block body %}
+    <body>
+        <h1>Oops!</h1>
+        <p>We do not carry this item, or it is not in stock. Please try again later.</p>
+        <img src="{{preview_url}}" />
+        <br>
+        <a href="{% url 'homepage' %}">Return Home</a></li>
+    </body>
+    {% endblock %}
+</html>

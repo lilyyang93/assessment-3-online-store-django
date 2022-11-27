@@ -1,0 +1,22 @@
+{% extends 'pages/layout.html' %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Lily's Cafe</title>
+    </head>
+    {% block body %}
+    <body>
+        <h1>{{product.0.name}} Details</h1>
+            {% for p in product %}
+            Item: {{p.name}}<br>
+            Category: {{p.category}}<br>
+            Price: ${{p.cost}}<br>
+            <img class="cafeItemImage" src="{{p.image_url}}/"><br>
+            {% endfor %}
+        <button onclick="addToCart({{product.0.id}})">Add to cart</button><br>
+
+        <a href="{% url 'homepage' %}">Return Home</a>
+    </body>
+    {% endblock %}
+</html>

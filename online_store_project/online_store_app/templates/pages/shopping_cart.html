@@ -1,0 +1,22 @@
+{% extends 'pages/layout.html' %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Lily's Cafe</title>
+    </head>>
+
+{% block body %}
+<body>
+    <h1>Your Shopping Cart</h1>
+    <ul style=text-align:left>
+        {% for item in cart %}
+        <li>{{item.name}} -- quantity: {{item.quantity}} -- price: ${% widthratio item.quantity 1 item.cost %} </li>
+        {% endfor %}
+    </ul>
+    <p>TOTAL PRICE: $</p><br>
+    <a href="{% url 'homepage' %}">Return Home</a>
+</body>
+{% endblock %}
+</html>
